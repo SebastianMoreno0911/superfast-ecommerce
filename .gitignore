@@ -1,0 +1,29 @@
+# Archivos y carpetas comunes para ignorar
+*.log
+*.tmp
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+*.code-workspace
+
+# Node.js
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Java
+*.class
+target/
+*.jar
+
+# Otros
+.env
