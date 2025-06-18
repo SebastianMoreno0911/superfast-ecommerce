@@ -35,34 +35,11 @@
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="contenedor-carrito">
-                <p class="carrito vacio">El carrito está vacío 🙁</p>
-
-                <div class="carrito-productos">
-                    <div class="carrito-producto">
-                        <img src="/img/Electricos/Energica Ego+.png" alt="">
-                        <div class="carrito-producto-nombre">
-                            <small>Titulo</small>
-                            <h3>Electrico 01</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$15,000</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>SubTotal</small>
-                            <p>$15,000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash2"></i> </button>
-                    </div>
-                </div>
+                <p class="carrito-vacio">El carrito está vacío 🙁</p>
                 
-                <div class="carrito-productos">
+                <div class="carrito-productos disabled">
                     <div class="carrito-producto">
-                        <img src="/img/Electricos/tesla cybertruck.png" alt="">
+                        <img  class="carrito-producto-imagen" src="/img/Electricos/tesla cybertruck.png" alt="">
                         <div class="carrito-producto-nombre">
                             <small>Titulo</small>
                             <h3>Electrico 02</h3>
@@ -83,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="carrito-acciones">
+                <div class="carrito-acciones disabled">
                     <div class="carrito-acciones-izq">
                         <button class="carrito-acciones-vaciar">Vaciar Carrito</button>
                     </div>
@@ -95,6 +72,7 @@
                         <button class="carrito-acciones-comprar">Comprar Ahora</button>
                     </div>
                 </div>
+                <p class="carrito-comprado disabled">Muchas gracias por tu compra! <i class="bi bi-emoji-wink"></i></p>
 
             </div>
 

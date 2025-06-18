@@ -3,134 +3,154 @@ const productos = [
   //motos
   {
     id: "moto-1",
-    nombre: "BMW S1000RR",
+    titulo: "BMW S1000RR",
     imagen: "/img/motos/bmw s1000rr.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 22000,
+    precio: "USD $" + 22000,
   },
   {
     id: "moto-2",
-    nombre: "GSX-R1000 GT",
+    titulo: "GSX-R1000 GT",
     imagen: "/img/motos/GSX S1000GT.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 14500,
+    precio: "USD $" + 14500,
   },
   {
     id: "moto-3",
-    nombre: "Yamaha MT-09",
+    titulo: "Yamaha MT-09",
     imagen: "/img/motos/mt09.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 10500,
+    precio: "USD $" + 10500,
   },
   {
     id: "moto-4",
-    nombre: "Yamaha MT-10",
+    titulo: "Yamaha MT-10",
     imagen: "/img/motos/mt10.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 15500,
+    precio: "USD $" + 15500,
   },
   {
     id: "moto-5",
-    nombre: "Yamaha R1",
+    titulo: "Yamaha R1",
     imagen: "/img/motos/r1.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 18500,
+    precio: "USD $" + 18500,
   },
   {
     id: "moto-6",
-    nombre: "Kawasaki Z900",
+    titulo: "Kawasaki Z900",
     imagen: "/img/motos/z900.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 9500,
+    precio: "USD $" + 9500,
   },
   {
     id: "moto-7",
-    nombre: "Yamaha Tracer 9 GT+",
+    titulo: "Yamaha Tracer 9 GT+",
     imagen: "/img/motos/tracer.png",
     categoria: {
       nombre: "Motos",
       id: "motos",
     },
-    precio: 15500,
+    precio: "USD $" + 15500,
   },
   //carros
   {
     id: "carro-1",
-    nombre: "Honda NSX (2ª gen)",
+    titulo: "Honda NSX (2ª gen)",
     imagen: "/img/carros/Honda NSX (2ª gen).png",
     categoria: {
       nombre: "Carros",
       id: "carros",
     },
-    precio: 175000,
+    precio: "USD $" + 175000,
   },
   {
     id: "carro-2",
-    nombre: "Nissan GT-R R35",
+    titulo: "Nissan GT-R R35",
     imagen: "/img/carros/Nissan GT-R R35.png",
     categoria: {
       nombre: "Carros",
       id: "carros",
     },
-    precio: 220000,
+    precio: "USD $" + 220000,
   },
   {
     id: "carro-3",
-    nombre: "Toyota GR Supra GT4 EVO",
+    titulo: "Toyota GR Supra GT4 EVO",
     imagen: "/img/carros/TOYOTA GR SUPRA GT4 EVO.png",
     categoria: {
       nombre: "Carros",
       id: "carros",
     },
-    precio: 250000,
+    precio: "USD $" + 250000,
   },
   //electricos
   {
     id: "electrico-1",
-    nombre: "Energica Ego+",
+    titulo: "Energica Ego+",
     imagen: "/img/Electricos/Energica Ego+.png",
     categoria: {
       nombre: "Electricos",
       id: "electricos",
     },
-    precio: 30000,
+    precio: "USD $" + 30000,
   },
   {
     id: "electrico-2",
-    nombre: "Tesla Cybertruck",
-    imagen: "/img/Electricos/tesla cybertruck.png.png",
+    titulo: "Tesla Cybertruck",
+    imagen: "/img/Electricos/tesla cybertruck.png",
     categoria: {
       nombre: "Electricos",
       id: "electricos",
     },
-    precio: 99900,
+    precio: "USD $" + 99900,
   },
   {
     id: "electrico-3",
-    nombre: "Tesla Model 3",
+    titulo: "Tesla Model 3",
     imagen: "/img/Electricos/Tesla Model 3.png",
     categoria: {
       nombre: "Electricos",
       id: "electricos",
     },
-    precio: 55000,
+    precio: "USD $" + 55000,
   },
 ];
+
+const contenedorProductos = document.querySelector("#contenedor-productos");
+
+function cargarProductos() {
+  productos.forEach((productos) => {
+    const div = document.createElement("div");
+    div.classList.add("producto");
+    div.innerHTML = `
+      <img class="producto-imagen" src="${productos.imagen}" alt="${productos.titulo}">
+      <div class="producto-detalles">
+          <h3 class="producto-titulo">${productos.titulo}</h3>
+          <p class="producto-precio">${productos.precio}</p>
+          <button class="producto-agregar" id="${productos.id}">Agregar</button>
+      </div>
+    `;
+    contenedorProductos.append(div);
+  });
+}
+
+cargarProductos();

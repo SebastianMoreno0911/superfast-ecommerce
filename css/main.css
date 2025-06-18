@@ -68,6 +68,7 @@ aside {
   font-weight: 600;
   cursor: pointer;
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 1rem;
   font-size: 0.85rem;
@@ -129,11 +130,25 @@ aside {
 }
 
 button:hover,
-.boton-menu:hover:not(.active):not(.boton-carrito) {
+.boton-menu:hover:not(.active):not(.boton-carrito):not(
+    .carrito-boton-eliminar
+  ) {
   background-color: var(--clr-main-light);
   color: var(--clr-white);
   transition: background-color 0.3s, color 0.3s;
   border-radius: 1rem;
+}
+
+.numerito {
+  background-color: var(--clr-white);
+  color: var(--clr-main);
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.boton-carrito.active .numerito {
+  background-color: var(--clr-main);
+  color: var(--clr-white);
 }
 
 .texto-footer {
@@ -198,4 +213,95 @@ main {
 .producto-agregar:hover {
   background-color: var(--clr-main);
   color: var(--clr-white);
+}
+
+/** CARRITO */
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+  color: var(--clr-main);
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-gray);
+  color: var(--clr-main);
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  margin: 0.4rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.carrito-producto-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-producto small {
+  font-size: 0.75rem;
+}
+
+.carrito-producto-eliminar {
+  border: 0;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+  border: 0;
+  background-color: var(--clr-gray);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--clr-main);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.carrito-acciones-der {
+  display: flex;
+}
+
+.carrito-acciones-total {
+  display: flex;
+  background-color: var(--clr-gray);
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: var(--clr-main);
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
+.carrito-acciones-comprar {
+  border: 0;
+  background-color: var(--clr-main);
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
 }
