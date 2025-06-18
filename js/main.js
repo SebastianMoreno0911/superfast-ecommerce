@@ -102,4 +102,35 @@ const productos = [
     },
     precio: 250000,
   },
+  //electricos
+  {
+    id: "electrico-1",
+    nombre: "Energica Ego+",
+    imagen: "/img/Electricos/Energica Ego+.png",
+    categoria: {
+      nombre: "Electricos",
+      id: "electricos",
+    },
+    precio: 30000,
+  },
+  {
+    id: "electrico-2",
+    nombre: "Tesla Cybertruck",
+    imagen: "/img/Electricos/tesla cybertruck.png.png",
+    categoria: {
+      nombre: "Electricos",
+      id: "electricos",
+    },
+    precio: 99900,
+  },
+  {
+    id: "electrico-3",
+    nombre: "Tesla Model 3",
+    imagen: "/img/Electricos/Tesla Model 3.png",
+    categoria: {
+      nombre: "Electricos",
+      id: "electricos",
+    },
+    precio: 55000,
+  },
 ];
