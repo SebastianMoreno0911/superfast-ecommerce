@@ -18,20 +18,20 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los Productos</button>
+                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los Productos</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-bicycle"></i>Motos</button>
+                        <button id="motos" class="boton-menu boton-categoria"><i class="bi bi-bicycle"></i>Motos</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-car-front"></i>Carros</button>
+                        <button id="carros" class="boton-menu boton-categoria"><i class="bi bi-car-front"></i>Carros</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-file-diff"></i> Electricos</button>
+                        <button id="electricos" class="boton-menu boton-categoria"><i class="bi bi-file-diff"></i> Electricos</button>
                     </li>
                     <li>
                         <a class="boton-menu boton-carrito " href="/carrito.html">
-                            <i class="bi bi-cart"></i>Carrito <span class="numerito">0</span>
+                            <i class="bi bi-cart"></i>Carrito <span class="numerito" id="numerito">0</span>
                         </a>
                     </li>
                 </ul>
@@ -41,7 +41,7 @@
         </aside>
 
         <main>
-            <h2 class="titulo-principal">Todos los Productos</h2>
+            <h2 class="titulo-principal" id="titulo-principal">Todos los Productos</h2>
             <div id="contenedor-productos" class="contenedor-productos">
                 <!-- Aquí se cargarán los productos dinámicamente con js-->
             </div>
@@ -49,9 +49,6 @@
         </main>
     </div>
 
-
-
     <script src="/js/main.js"></script> <!-- script de la tienda -->
-
 </body>
 </html>

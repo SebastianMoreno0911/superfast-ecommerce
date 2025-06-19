@@ -71,6 +71,16 @@ const productos = [
     },
     precio: "USD $" + 15500,
   },
+  {
+    id: "moto-8",
+    titulo: "Ducati Superleggera V4",
+    imagen: "/img/motos/Superleggera V4.png",
+    categoria: {
+      nombre: "Motos",
+      id: "motos",
+    },
+    precio: "USD $" + 100000,
+  },
   //carros
   {
     id: "carro-1",
@@ -101,6 +111,16 @@ const productos = [
       id: "carros",
     },
     precio: "USD $" + 250000,
+  },
+  {
+    id: "carro-4",
+    titulo: "Chevrolet Corvette ZR1",
+    imagen: "/img/carros/Chevrolet Corvette ZR1.png",
+    categoria: {
+      nombre: "Carros",
+      id: "carros",
+    },
+    precio: "USD $" + 174995,
   },
   //electricos
   {
@@ -136,9 +156,15 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategoria = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
 
-function cargarProductos() {
-  productos.forEach((productos) => {
+function cargarProductos(productosElegidos) {
+  contenedorProductos.innerHTML = ""; // Limpiar el contenedor antes de cargar nuevos productos
+
+  productosElegidos.forEach((productos) => {
     const div = document.createElement("div");
     div.classList.add("producto");
     div.innerHTML = `
@@ -151,6 +177,82 @@ function cargarProductos() {
     `;
     contenedorProductos.append(div);
   });
+  actualizarBotonesAgregar();
 }
 
-cargarProductos();
+cargarProductos(productos);
+
+botonesCategoria.forEach((boton) => {
+  boton.addEventListener("click", (e) => {
+    botonesCategoria.forEach((boton) => boton.classList.remove("active"));
+
+    e.currentTarget.classList.add("active");
+
+    if (e.currentTarget.id != "todos") {
+      const productoCategoria = productos.find(
+        (producto) => producto.categoria.id === e.currentTarget.id
+      );
+      tituloPrincipal.innerHTML = productoCategoria.categoria.nombre;
+      const productosBoton = productos.filter(
+        (producto) => producto.categoria.id === e.currentTarget.id
+      );
+
+      cargarProductos(productosBoton);
+    } else {
+      tituloPrincipal.innerHTML = "Todos los productos";
+      cargarProductos(productos);
+    }
+  });
+});
+
+function actualizarBotonesAgregar() {
+  botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+  botonesAgregar.forEach((boton) => {
+    boton.addEventListener("click", agregarAlCarrito);
+  });
+}
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+  productosEnCarrito = JSON.parse(productosEnCarritoLS);
+  actualizarNumerito();
+} else {
+  productosEnCarrito = [];
+}
+
+function agregarAlCarrito(e) {
+  const idBoton = e.currentTarget.id;
+  const productoAgregado = productos.find(
+    (producto) => producto.id === idBoton
+  );
+
+  if (productosEnCarrito.some((producto) => producto.id === idBoton)) {
+    const index = productosEnCarrito.findIndex(
+      (producto) => producto.id === idBoton
+    );
+    productosEnCarrito[index].cantidad++; // Incrementar la cantidad del producto si ya está en el carrito
+  } else {
+    productoAgregado.cantidad = 1; // Asignar una cantidad inicial de 1
+    productosEnCarrito.push(productoAgregado);
+  }
+
+  actualizarNumerito();
+
+  localStorage.setItem(
+    "productos-en-carrito",
+    JSON.stringify(productosEnCarrito)
+  );
+}
+
+function actualizarNumerito() {
+  let nuevoNumerito = productosEnCarrito.reduce(
+    (acc, producto) => acc + producto.cantidad,
+    0
+  );
+
+  numerito.innerText = nuevoNumerito;
+}
