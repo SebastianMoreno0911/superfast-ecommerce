@@ -2,7 +2,7 @@
 
 ---
 
-![Ecommerce Banner](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
+![Ecommerce Banner](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJiNTNrejJ1aml1cGpvMGhlMXRjd3BqZ2o1ank3cmcxMHUyaTVjdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XD9o33QG9BoMis7iM4/giphy.gif)
 
 Bienvenido a **SuperFast Ecommerce**, una tienda online interactiva de vehículos de alto rendimiento (motos, carros y eléctricos) desarrollada como proyecto personal para demostrar habilidades en desarrollo web frontend. Ideal para mi portafolio o CV.
 
