@@ -73,18 +73,9 @@ Ecommerce/
 
 ---
 
-## 🤩 ¿Por qué es ideal para mi CV?
-
-- Demuestro manejo de DOM, eventos y almacenamiento local.
-- Muestro buenas prácticas de organización de archivos y código.
-- Interfaz profesional y moderna.
-- Fácil de ampliar y adaptar a otros productos o funcionalidades.
-
----
-
 ## 📬 Contacto
 
-¿Te gustó el proyecto? ¿Quieres colaborar o tienes feedback? ¡Contáctame!
+¿Te gustó el proyecto? ¡Contáctame!
 
 [![Email](https://img.shields.io/badge/email-contacto-blue?style=flat&logo=gmail)](mailto:sebasmoreno744@gmail.com)
 
