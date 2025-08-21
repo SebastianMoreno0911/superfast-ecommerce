@@ -50,7 +50,7 @@ Ecommerce/
 
 ## 🖥️ Vista previa
 
-![Demo Ecommerce](https://drive.google.com/file/d/1sEmEmG_r8eN5WTJV_xDMirIq8LOrVHLY/view?usp=sharing)
+![Demo Ecommerce](https://i.postimg.cc/Rh4XbCzD/Captura-de-pantalla-2025-08-20-192745.png)
 
 ---
 
