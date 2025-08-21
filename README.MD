@@ -50,7 +50,7 @@ Ecommerce/
 
 ## 🖥️ Vista previa
 
-![Demo Ecommerce](https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif)
+![Demo Ecommerce](https://drive.google.com/file/d/1sEmEmG_r8eN5WTJV_xDMirIq8LOrVHLY/view?usp=sharing)
 
 ---
 
